@@ -25,3 +25,8 @@ header a:hover{
   background-color: rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
+@media screen and (max-width: 900px){
+  header{
+    flex-direction: column;
+  }
+}
