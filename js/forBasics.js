@@ -25,12 +25,11 @@ function drawPokemon(pokemon) {
     if (document.getElementById("pokemon")) {
         document.getElementById("pokemon").remove();
     }
-    let div = document.createElement("div");
-    div.id = "pokemon";
-    div.innerHTML = `
-        <h3>Pokemon № ${pokemon.id}</h3>
-        <h2>${pokemon.name[0].toUpperCase() + pokemon.name.substring(1)}</h2>
-        <img src="${pokemon.sprites.front_default}" alt="">
+    main.innerHTML = `
+        <div id="pokemon">
+            <h3>Pokemon № ${pokemon.id}</h3>
+            <h2>${pokemon.name[0].toUpperCase() + pokemon.name.substring(1)}</h2>
+            <img src="${pokemon.sprites.front_default}" alt="">
+        </div>
     `;
-    main.append(div);
 }

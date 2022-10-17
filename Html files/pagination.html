@@ -29,11 +29,18 @@
         <div id="chosenPokemon" style="display: none">
 
         </div>
-        <div class="buttons">
-            <button onclick="prev()" disabled>< Prev</button>
-            <button onclick="next()">Next ></button>
-        </div>
     </main>
+    <div class="buttons">
+        <button onclick="prev()" disabled>< Prev</button>
+        <ul>
+            <li id="selected">1</li>
+            <li>2</li>
+            <li class="central">3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <button onclick="next()">Next ></button>
+    </div>
     <script src="../js/pagination.js"></script>
 </body>
 </html>
