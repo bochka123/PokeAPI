@@ -3,6 +3,8 @@ body {
   background-size: 100%;
 }
 header {
+  position: sticky;
+  top: 8px;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
