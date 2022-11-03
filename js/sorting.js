@@ -25,14 +25,15 @@ request.onload = function () {
             pokemonRequest.onerror = function() {
                 reject(pokemonRequest.statusText);
             }
-        })
+        });
         promise.then((pokemon)=>{
             allPokemons.push(pokemon);
             drawPokemon(pokemon);
-        })
+        });
     });
 }
 function drawPokemon(pokemon){
+    console.log(pokemon);
     main.innerHTML += `
         <div id="pokemon">
             <p>Pokemon № ${pokemon.id}</p>
@@ -45,7 +46,7 @@ function drawPokemon(pokemon){
                 <p class="speed stat">&#128007;${pokemon.stats[5].base_stat}</p>
             </div>
         </div>
-    `
+    `;
 }
 form.addEventListener("change", (event)=>{
     let value = event.target.value;
@@ -72,11 +73,11 @@ form.addEventListener("change", (event)=>{
             order = false;
             break;
     }
-    sort(object, order);
+    sort();
 })
-function sort(item){
+function sort(){
     main.innerHTML = null;
-    switch (item) {
+    switch (object) {
         case "id":
             allPokemons = allPokemons.sort(function (first, second) {
                 if (first.id > second.id) {
@@ -133,5 +134,5 @@ function sort(item){
     }
     allPokemons.forEach((pokemon)=>{
         drawPokemon(pokemon);
-    })
+    });
 }

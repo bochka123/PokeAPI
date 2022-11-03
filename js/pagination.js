@@ -37,7 +37,6 @@ function makeList(url) {
 }
 
 function show(pokemonUrl) {
-    console.log(pokemonUrl);
     let pokemonRequest = new XMLHttpRequest();
     pokemonRequest.open("GET", pokemonUrl);
     pokemonRequest.send();
@@ -89,20 +88,20 @@ numbers.forEach((number) => {
         document.getElementById("selected").removeAttribute("id");
         if (currentPage > 2 && currentPage < (1154 / limit) - 1) {
             centralNumber.id = "selected";
-            for (let i = currentPage-1, j = 0; i < numbers.length+currentPage-1; i++,j++) {
+            for (let i = currentPage - 1, j = 0; i < numbers.length + currentPage - 1; i++, j++) {
                 numbers[j].textContent = String(i);
             }
         } else {
-            if(this.textContent === "3"){
+            if (this.textContent === "3") {
                 centralNumber.id = "selected";
-            }else {
+            } else {
                 this.id = "selected";
             }
             for (let i = 0; i < numbers.length; i++) {
-                numbers[i].textContent = String(i+1);
+                numbers[i].textContent = String(i + 1);
             }
         }
-        offset = (currentPage+1) * limit;
+        offset = currentPage * limit;
         console.log(offset);
         url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;
         list.innerHTML = ``;

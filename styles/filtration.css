@@ -1,0 +1,62 @@
+h1, form{
+    margin: 10px;
+    background-color: burlywood;
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 30px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#rangesAndTexts{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+#checkBoxes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+#pokemon{
+    width: auto;
+    background-color: burlywood;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 30px;
+}
+.stats{
+    display: flex;
+    justify-content: space-around;
+}
+.hp{
+    color: red;
+}
+.attack{
+    color: green;
+}
+.defense{
+    color: blue;
+}
+.speed{
+    color: yellow;
+}
+.stat{
+    margin: 0 10px;
+}
+.heightAndWeight, .types{
+    display: flex;
+    justify-content: space-around;
+}

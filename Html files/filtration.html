@@ -14,6 +14,150 @@
     <a href="sorting.html">Сортування</a>
     <a href="filtration.html">Фільтрація</a>
 </header>
+<h1>Фільтрація покемонів локації Канто (перші 127)</h1>
+<form>
+    <h2>Фільтрувати за:</h2>
+    <label for="name">
+        Name:
+        <input type="text" id="name" placeholder="Покемон">
+    </label>
+    <div id="rangesAndTexts">
+        <label for="minHp">
+            Здоров'я від:
+            <input type="range" id="minHp" min="10" max="250" value="10">
+        </label>
+        <label for="maxHp">
+            Здоров'я до:
+            <input type="range" id="maxHp" min="10" max="250" value="250">
+        </label>
+        <label for="minAttack">
+            Атака від:
+            <input type="range" id="minAttack" min="5" max="130" value="5">
+        </label>
+        <label for="maxAttack">
+            Атака до:
+            <input type="range" id="maxAttack" min="5" max="130" value="130">
+        </label>
+        <label for="minDefense">
+            Захист від:
+            <input type="range" id="minDefense" min="5" max="180" value="5">
+        </label>
+        <label for="maxDefense">
+            Захист до:
+            <input type="range" id="maxDefense" min="5" max="180" value="180">
+        </label>
+        <label for="minSpeed">
+            Швидкість від:
+            <input type="range" id="minSpeed" min="15" max="150" value="15">
+        </label>
+        <label for="maxSpeed">
+            Швидкість до:
+            <input type="range" id="maxSpeed" min="15" max="150" value="150">
+        </label>
+        <label for="minHeight">
+            Мінімальна висота:
+            <input type="text" id="minHeight" placeholder="Мінімальна висота" value="2">
+        </label>
+        <label for="maxHeight">
+            Максимальна висота:
+            <input type="text" id="maxHeight" placeholder="Максимальна висота" value="88">
+        </label>
+        <label for="minWeight">
+            Мінімальна вага:
+            <input type="text" id="minWeight" placeholder="Мінімальна вага" value="1">
+        </label>
+        <label for="maxWeight">
+            Максимальна вага:
+            <input type="text" id="maxWeight" placeholder="Максимальна вага" value="3000">
+        </label>
+    </div>
+    <div id="checkBoxes">
+        <label for="normal">
+            Нормальні:
+            <input type="checkbox" id="normal" name="type" value="normal" checked>
+        </label>
+        <label for="fighting">
+            Бійці:
+            <input type="checkbox" id="fighting" name="type" value="fighting" checked>
+        </label>
+        <label for="flying">
+            Літаючі:
+            <input type="checkbox" id="flying" name="type" value="flying" checked>
+        </label>
+        <label for="poison">
+            Отруйні:
+            <input type="checkbox" id="poison" name="type" value="poison" checked>
+        </label>
+        <label for="ground">
+            Земляні:
+            <input type="checkbox" id="ground" name="type" value="ground" checked>
+        </label>
+        <label for="rock">
+           Кам'яні:
+            <input type="checkbox" id="rock" name="type" value="rock" checked>
+        </label>
+        <label for="bug">
+            Жуки:
+            <input type="checkbox" id="bug" name="type" value="bug" checked>
+        </label>
+        <label for="ghost">
+            Привиди:
+            <input type="checkbox" id="ghost" name="type" value="ghost" checked>
+        </label>
+        <label for="steel">
+            Стальні:
+            <input type="checkbox" id="steel" name="type" value="steel" checked>
+        </label>
+        <label for="fire">
+            Палаючі:
+            <input type="checkbox" id="fire" name="type" value="fire" checked>
+        </label>
+        <label for="water">
+            Водяні:
+            <input type="checkbox" id="water" name="type" value="water" checked>
+        </label>
+        <label for="grass">
+            Трав'яні:
+            <input type="checkbox" id="grass" name="type" value="grass" checked>
+        </label>
+        <label for="electric">
+            Електричні:
+            <input type="checkbox" id="electric" name="type" value="electric" checked>
+        </label>
+        <label for="psychic">
+            Духовні:
+            <input type="checkbox" id="psychic" name="type" value="psychic" checked>
+        </label>
+        <label for="ice">
+            Льодяні:
+            <input type="checkbox" id="ice" name="type" value="ice" checked>
+        </label>
+        <label for="dragon">
+            Дракони:
+            <input type="checkbox" id="dragon" name="type" value="dragon" checked>
+        </label>
+        <label for="dark">
+            Темні:
+            <input type="checkbox" id="dark" name="type" value="dark" checked>
+        </label>
+        <label for="fairy">
+            Феї:
+            <input type="checkbox" id="fairy" name="type" value="fairy" checked>
+        </label>
+        <label for="unknown">
+            Невідомі:
+            <input type="checkbox" id="unknown" name="type" value="unknown" checked>
+        </label>
+        <label for="shadow">
+            Тіньові:
+            <input type="checkbox" id="shadow" name="type" value="shadow" checked>
+        </label>
+    </div>
+    <input type="submit" value="Застосувати фільтри">
+</form>
+<main>
+
+</main>
 <script src="../js/filtration.js"></script>
 </body>
 </html>
