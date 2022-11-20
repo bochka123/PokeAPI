@@ -59,89 +59,90 @@ function drawPokemon(pokemon) {
         </div>
     `;
 }
-form.addEventListener("submit",(event)=>{
+
+form.addEventListener("submit", (event) => {
     event.preventDefault();
     sortedPokemons = allPokemons;
     //name
-    if(event.target.name.value){
-        sortedPokemons = sortedPokemons.filter(function (pokemon){
+    if (event.target.name.value) {
+        sortedPokemons = sortedPokemons.filter(function (pokemon) {
             return pokemon.name.indexOf(event.target.name.value.toLowerCase()) !== -1;
         });
     }
     //hp
-    if(event.target.minHp.value > 10){
-        sortedPokemons = sortedPokemons.filter(function (pokemon){
+    if (event.target.minHp.value > 10) {
+        sortedPokemons = sortedPokemons.filter(function (pokemon) {
             return pokemon.stats[0].base_stat >= event.target.minHp.value;
         });
     }
-    if(event.target.maxHp.value < 250){
-        sortedPokemons = sortedPokemons.filter(function (pokemon){
+    if (event.target.maxHp.value < 250) {
+        sortedPokemons = sortedPokemons.filter(function (pokemon) {
             return pokemon.stats[0].base_stat <= event.target.maxHp.value;
         });
     }
     //attack
-    if(event.target.minAttack.value > 5){
-        sortedPokemons = sortedPokemons.filter(function (pokemon){
+    if (event.target.minAttack.value > 5) {
+        sortedPokemons = sortedPokemons.filter(function (pokemon) {
             return pokemon.stats[1].base_stat >= event.target.minAttack.value;
         });
     }
-    if(event.target.maxAttack.value < 130){
-        sortedPokemons = sortedPokemons.filter(function (pokemon){
+    if (event.target.maxAttack.value < 130) {
+        sortedPokemons = sortedPokemons.filter(function (pokemon) {
             return pokemon.stats[1].base_stat <= event.target.maxAttack.value;
         });
     }
     //defense
-    if(event.target.minDefense.value > 5){
-        sortedPokemons = sortedPokemons.filter(function (pokemon){
+    if (event.target.minDefense.value > 5) {
+        sortedPokemons = sortedPokemons.filter(function (pokemon) {
             return pokemon.stats[2].base_stat >= event.target.minDefense.value;
         });
     }
-    if(event.target.maxDefense.value < 180){
-        sortedPokemons = sortedPokemons.filter(function (pokemon){
+    if (event.target.maxDefense.value < 180) {
+        sortedPokemons = sortedPokemons.filter(function (pokemon) {
             return pokemon.stats[2].base_stat <= event.target.maxDefense.value;
         });
     }
     //speed
-    if(event.target.minSpeed.value > 15){
-        sortedPokemons = sortedPokemons.filter(function (pokemon){
+    if (event.target.minSpeed.value > 15) {
+        sortedPokemons = sortedPokemons.filter(function (pokemon) {
             return pokemon.stats[5].base_stat >= event.target.minSpeed.value;
         });
     }
-    if(event.target.maxSpeed.value < 150){
-        sortedPokemons = sortedPokemons.filter(function (pokemon){
+    if (event.target.maxSpeed.value < 150) {
+        sortedPokemons = sortedPokemons.filter(function (pokemon) {
             return pokemon.stats[5].base_stat <= event.target.maxSpeed.value;
         });
     }
     //height
-    if(event.target.minHeight.value > 1){
-        sortedPokemons = sortedPokemons.filter(function (pokemon){
+    if (event.target.minHeight.value > 1) {
+        sortedPokemons = sortedPokemons.filter(function (pokemon) {
             return pokemon.height >= event.target.minHeight.value;
         });
     }
-    if(event.target.maxHeight.value < 89){
-        sortedPokemons = sortedPokemons.filter(function (pokemon){
-            return pokemon.height<= event.target.maxHeight.value;
+    if (event.target.maxHeight.value < 89) {
+        sortedPokemons = sortedPokemons.filter(function (pokemon) {
+            return pokemon.height <= event.target.maxHeight.value;
         });
     }
     //weight
-    if(event.target.minWeight.value > 0){
-        sortedPokemons = sortedPokemons.filter(function (pokemon){
+    if (event.target.minWeight.value > 0) {
+        sortedPokemons = sortedPokemons.filter(function (pokemon) {
             return pokemon.weight >= event.target.minWeight.value;
         });
     }
-    if(event.target.maxWeight.value < 3001){
-        sortedPokemons = sortedPokemons.filter(function (pokemon){
-            return pokemon.weight<= event.target.maxWeight.value;
+    if (event.target.maxWeight.value < 3001) {
+        sortedPokemons = sortedPokemons.filter(function (pokemon) {
+            return pokemon.weight <= event.target.maxWeight.value;
         });
     }
     // type
-    event.target.type.forEach(function (filterType){
+    event.target.type.forEach(function (filterType) {
         console.log(filterType);
         console.log(filterType.value);
-        if(!filterType.checked){
-            sortedPokemons = sortedPokemons.filter(function (pokemon){
-                for(i in pokemon.types){
-                    if(pokemon.types[i].type.name === filterType.value) {
+        if (!filterType.checked) {
+            sortedPokemons = sortedPokemons.filter(function (pokemon) {
+                for (let i in pokemon.types) {
+                    if (pokemon.types[i].type.name === filterType.value) {
                         return false;
                     }
                 }
@@ -150,7 +151,7 @@ form.addEventListener("submit",(event)=>{
         }
     })
     main.innerHTML = null;
-    sortedPokemons.forEach((pokemon)=>{
+    sortedPokemons.forEach((pokemon) => {
         drawPokemon(pokemon);
     })
 })
